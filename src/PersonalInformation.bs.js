@@ -2,7 +2,7 @@
 'use strict';
 
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-var PersonalInformationJs = require("./PersonalInformation.js");
+var PersonalInformation = require("./PersonalInformation");
 
 function make(name, age, children) {
   var tmp = {
@@ -11,7 +11,7 @@ function make(name, age, children) {
   if (age) {
     tmp.age = age[0];
   }
-  return ReasonReact.wrapJsForReason(PersonalInformationJs, tmp, children);
+  return ReasonReact.wrapJsForReason(PersonalInformation.default, tmp, children);
 }
 
 exports.make = make;
