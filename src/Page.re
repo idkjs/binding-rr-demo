@@ -3,7 +3,13 @@ let component = ReasonReact.statelessComponent("Page");
 
 let make = _children => {
   ...component,
-  render: self => <PersonalInformation name="Khoa Nguyen" age=?(Some(24)) />,
+  render: _self =>
+    <PersonalInformationWithTransform
+      name="Khoa Nguyen"
+      age=?(Some(24))
+      showAge=Js.true_
+    />,
+  /* render: _self => <PersonalInformation name="Khoa Nguyen" age=?(Some(24)) />, */
 };
 /* [@bs.module]
    external myJSReactClass : ReasonReact.reactClass = "./myJSReactClass";

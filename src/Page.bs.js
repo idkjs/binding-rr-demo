@@ -2,14 +2,14 @@
 'use strict';
 
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-var PersonalInformation$ReactTemplate = require("./PersonalInformation.bs.js");
+var PersonalInformationWithTransform$ReactTemplate = require("./PersonalInformationWithTransform.bs.js");
 
 var component = ReasonReact.statelessComponent("Page");
 
 function make() {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return ReasonReact.element(/* None */0, /* None */0, PersonalInformation$ReactTemplate.make("Khoa Nguyen", /* Some */[24], /* array */[]));
+      return ReasonReact.element(/* None */0, /* None */0, PersonalInformationWithTransform$ReactTemplate.make("Khoa Nguyen", /* Some */[24], /* Some */[/* true */1], /* array */[]));
     });
   return newrecord;
 }
